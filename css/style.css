@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --sombra-tamanhos: 0 5px 10px rgba(0, 0, 0, 0.2);
+  --sombra-card-principal: 0 20px 20px rgba(0, 0, 0, 0.2);
+  --sombra-card-secundaria: 0 0px 50px rgba(0, 0, 0, 0.2);
+  --cor-texto-padrao: #585858;
+}
+
+body {
+  font-family: Poppins, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  transform-style: preserve-3d;
+  min-height: 80vh;
+  width: 25rem;
+  box-shadow: var(--sombra-card-principal), var(--sombra-card-secundaria);
+  border-radius: 2rem;
+  padding: 0 2rem;
+}
+
+.tenis {
+  min-height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tenis img {
+  transition: 0.5s ease-out;
+  object-fit: cover;
+  height: 12rem;
+  width: 18rem;
+  z-index: 2;
+}
+
+.circulo {
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  background: linear-gradient(to right, rgba(38, 70, 125, 0.75), rgba(164, 169, 178, 0.75));
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.info h1 {
+  transition: 0.5s ease-out;
+  font-size: 2rem;
+  color: var(--cor-texto-padrao);
+}
+
+.info h3 {
+  transition: 0.5s ease-out;
+  font-size: 1rem;
+  padding: 2rem 0;
+  color: var(--cor-texto-padrao);
+  font-weight: lighter;
+}
+
+.tamanhos {
+  display: flex;
+  justify-content: space-between;
+  transition: 0.5s ease-out;
+}
+
+.tamanhos button {
+  padding: 0.5rem 2rem;
+  background: none;
+  outline: none;
+  border: none;
+  box-shadow: var(--sombra-tamanhos);
+  cursor: pointer;
+  color: var(--cor-texto-padrao);
+  background: #fff;
+  border-radius: 0.5rem;
+}
+
+button.ativo {
+  background: var(--cor-texto-padrao);
+  color: #fff;
+}
+
+.comprar {
+  margin-top: 2rem;
+}
+
+.comprar button {
+  width: 100%;
+  padding: 0.8rem 0;
+  background: #26467c;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  transition: 0.5s ease-out;
+}
